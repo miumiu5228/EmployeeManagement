@@ -1,0 +1,45 @@
+﻿@model List<ApplicationCore.Models.ResponseModel.TaskResponseModel>
+
+@{
+    ViewData["Title"] = " ListTasks";
+}
+
+<div class="text-center">
+
+    <h1 class="mb-5 mt-5"> @ViewBag.name's tasks </h1>
+
+    <a asp-controller="EmployeeTask" asp-action="Add" asp-route-id="@ViewBag.empId" type="button" class="btn btn-info  float-left mb-4">Add Task</a>
+    <a asp-controller="Home" asp-action="Index" type="button" class="btn btn-outline-info ml-2 float-left"  style="display:inline">Back</a>
+
+    <table class="table">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">TaskName</th>
+                <th scope="col">StartTime</th>
+                <th scope="col">Deadline</th>
+                <th scope="col" colspan="4">Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Model)
+            {
+                <tr>
+
+                    <td scope="col">@task.TaskName</td>
+                    <td scope="col">@task.StartTime</td>
+                    <td scope="col">@task.Deadline</td>
+
+                    <td>
+                        <a asp-controller="EmployeeTask" asp-action="Update" asp-route-id="@task.TaskId" type="button" class="btn btn-info" style="display:inline">Update</a>
+                        <form method="post" asp-controller="EmployeeTask" asp-action="Delete" asp-route-id="@task.TaskId" style="display:inline">
+                            <button type="submit" class="btn btn-danger d-none d-md-inline-block">
+                                Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

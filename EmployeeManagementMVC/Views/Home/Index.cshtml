@@ -1,0 +1,42 @@
+﻿@model List<ApplicationCore.Models.ResponseModel.EmployeeResponseModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <a asp-controller="Employee" asp-action="Add" type="button" class="btn btn-info float-left mb-4">Add Employee</a>
+    <table class="table">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">HiredDate</th>
+                <th scope="col" colspan="4">Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var emp in Model)
+            {
+                <tr>
+                    <td scope="col">
+                        <a asp-controller="EmployeeTask" asp-action="ListAllTask" asp-route-id="@emp.EmpId">
+                            @emp.FirstName
+                        </a>
+                    </td>
+                    <td scope="col">@emp.LastName</td>
+                    <td scope="col">@emp.HiredDate.ToShortDateString()</td>
+                    <td >
+                        <a asp-controller="Employee" asp-action="Update" asp-route-id="@emp.EmpId" type="button" class="btn btn-info" style="display:inline">Update</a>
+                      
+                        <form method="post" asp-controller="Employee" asp-action="Delete" asp-route-id="@emp.EmpId" style="display:inline">
+                            <button type="submit" class="btn btn-danger d-none d-md-inline-block">
+                                Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

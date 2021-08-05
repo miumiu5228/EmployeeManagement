@@ -1,0 +1,40 @@
+﻿@model ApplicationCore.Models.ResponseModel.EmployeeResponseModel
+@{
+    ViewData["Title"] = "UpdateEmployee";
+}
+
+<h3>Update Employee: @Model.FirstName</h3>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="Update">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+
+                <input name="EmpId" type="hidden" asp-for="EmpId" class="form-control">
+
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HiredDate" class="control-label"></label>
+                <input asp-for="HiredDate" class="form-control" />
+                <span asp-validation-for="HiredDate" class="text-danger"></span>
+            </div>
+
+        
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a type="button" class="btn btn-success ml-2" asp-controller="Home" asp-action="Index">Cancel</a>
+
+        </form>
+    </div>
+</div>
