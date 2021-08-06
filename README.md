@@ -6,19 +6,16 @@ The system stores information about the employee. I develop it with ASP .Net Cor
 <li>The page will redirect to the page that displays all the tasks that are related to the Employee when cliking the employee name</li>
 
 ## Homepage 
+### q
 ![screenshot](EmpManagementScreenshot/Homepage.png)
 
 ## Create Employee/Client/Interaction
-![screenshot](CreateEmp.png)
-![screenshot](CreateClient.png)
-![screenshot](CreateInteraction.png)
+![screenshot](EmpManagementScreenshot/AddEmp.png)
+![screenshot](EmpManagementScreenshot/AddTask.png)
 
-## Update/ Delete Interaction by Employee
-![screenshot](employeeInteration.png)
+## Update Task/ Employee
+![screenshot](EmpManagementScreenshot/UpdateEmp.png)
 
 ## Update/ Delete Interaction by Client
-![screenshot](clientInteration.png)
+![screenshot](EmpManagementScreenshot/UpdateTask.png)
 
-## Login/Register
-![screenshot](Login.png)
-![screenshot](Register.png)
