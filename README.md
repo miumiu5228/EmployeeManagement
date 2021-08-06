@@ -9,7 +9,7 @@ The system stores information about the employee. I develop it with ASP .Net Cor
 ### The Homepage displays the list of employee and all the Employee name are clickable. The Update button is used for updating the employee information. When you want to deleting the certain employee, clicking on the delete button on the right side. 
 ![screenshot](EmpManagementScreenshot/Homepage.png)
 
-## Create Employee/Client/Interaction
+## Create Employee/ Task
 ### The page is used for adding a new employee. Click the Cancel button to go back to the Homepage.
 ![screenshot](EmpManagementScreenshot/AddEmp.png)
 
