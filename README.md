@@ -23,3 +23,5 @@ The page is used for uploading the employee information. Clicking the Cancel but
 The page is used for updating a new task. Clicking the Cancel button to go back to the Task page.
 ![screenshot](EmpManagementScreenshot/UpdateTask.png)
 
+## API diagram 
+![screenshot](API.png)
