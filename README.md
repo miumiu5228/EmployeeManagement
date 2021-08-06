@@ -24,4 +24,4 @@ The page is used for updating a new task. Clicking the Cancel button to go back 
 ![screenshot](EmpManagementScreenshot/UpdateTask.png)
 
 ## API diagram 
-![screenshot](EmpManagementScreenshotAPI.png)
+![screenshot](EmpManagementScreenshot/API.png)
